@@ -15,7 +15,7 @@ after-success:
   - docker build -t imanr76/multi-server ./server
   - docker build -t imanr76/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push imar76/multi-client 
-  - docker push imar76/multi-nginx 
-  - docker push imar76/multi-server 
-  - docker push imar76/multi-worker 
+  - docker push imanr76/multi-client 
+  - docker push imanr76/multi-nginx 
+  - docker push imanr76/multi-server 
+  - docker push imanr76/multi-worker 
