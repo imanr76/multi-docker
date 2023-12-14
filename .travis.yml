@@ -19,3 +19,16 @@ after-success:
   - docker push imanr76/multi-nginx 
   - docker push imanr76/multi-server 
   - docker push imanr76/multi-worker 
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-1'
+  app: 'multi-docker'
+  env: 'docker-complex-env'
+  bucket_name: 'elasticbeanstalk-us-east-1-350203096375'
+  bucket_path: 'docker-complex'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
